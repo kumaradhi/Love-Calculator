@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Love Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: red;
+        }
+        p {
+            color: white;
+            font-size: 100px;
+            margin-left: 40px;
+        }
+        #result {
+            font-size: 24px;
+            margin-top: 20px;
+            
+        }
+        input{
+            font-size: 20px;
+            background-color:black;
+            color:white;
+        }
+       button{
+        font-size: 30px;
+        border: 0;
+
+       }
+       k{
+        color: white;
+       }
+    </style>
+</head>
+<body>
+    <p>Love &#9829; Calculator</p>
+   
+   <input type="text" id="username1" placeholder="Enter Name 1">
+    <input type="text" id="username2" placeholder="Enter Name 2">
+    <br><br>
+   
+    <button onclick="calculateLove()">Calculate Love</button>
+    <div class="k" id="result"></div>
+
+    <script>
+        function calculateLove() {
+            const username1 = document.getElementById('username1').value;
+            const username2 = document.getElementById('username2').value;
+
+            if (username1 === "" || username2 === "") {
+                alert("Please enter both names.");
+                return;
+            }
+
+           
+            const lovePercentage = Math.floor(Math.random() * 51) + 50;
+
+            const resultElement = document.getElementById('result');
+            resultElement.innerHTML = `${username1} and ${username2}'s Love Percentage is ${lovePercentage}%! ❤️`;
+        }
+    </script>
+</body>
+</html>
+
